@@ -1,0 +1,95 @@
+# My Weather Dresser. Done by: inrset me and hoors names and ids
+
+# Step 1: Get the weather information from the user
+
+print("Welcome to My Weather Dresser")
+
+temperature = float(input("Enter the temperature in Celsius: "))
+
+rain = input("Is it raining? (yes/no): ").lower()
+
+wind = input("Is it windy? (yes/no): ").lower()
+
+
+# Step 2: Check if the user's inputs are valid
+
+if temperature < -50 or temperature > 60:
+    print("Invalid temperature. Please enter a realistic value.")
+
+elif rain != "yes" and rain != "no":
+    print("Invalid answer for rain. Please enter yes or no.")
+
+elif wind != "yes" and wind != "no":
+    print("Invalid answer for wind. Please enter yes or no.")
+
+else:
+
+    # Step 3: Recommend an outfit based on the temperature
+
+    if temperature >= 30:
+        weather_category = "Hot"
+
+        headwear = "Sun Hat"
+        torso = "T-shirt"
+        legs = "Shorts"
+        footwear = "Sandals"
+
+    elif temperature >= 20:
+        weather_category = "Warm"
+
+        headwear = "Cap"
+        torso = "T-shirt"
+        legs = "Jeans"
+        footwear = "Sneakers"
+
+    elif temperature >= 10:
+        weather_category = "Chilly"
+
+        headwear = "Beanie or cap"
+        torso = "Long-sleeved shirt"
+        legs = "Jeans"
+        footwear = "Sneakers"
+
+    else:
+        weather_category = "Cold"
+
+        headwear = "Beanie or earmuffs"
+        torso = "Sweater or jacket"
+        legs = "Warm trousers"
+        footwear = "Boots"
+
+
+    # Step 4: Display the recommended outfit
+
+    print("\nYour Recommended Outfit")
+
+    print("Temperature:", temperature, "degrees Celsius")
+    print("Weather category:", weather_category)
+
+    print("Headwear:", headwear)
+    print("Torso:", torso)
+    print("Legs:", legs)
+    print("Footwear:", footwear)
+
+
+    # Step 5: Provide additional suggestions for rain and wind
+
+    print("\nAdditional Weather Suggestions")
+
+    if rain == "yes" and wind == "yes":
+        print("Consider bringing a light jacket or windbreaker.")
+        print("Consider bringing an umbrella or wearing water-resistant footwear.")
+
+    elif rain == "yes":
+        print("Consider bringing an umbrella or wearing water-resistant footwear.")
+
+    elif wind == "yes":
+        print("Consider bringing a light jacket or windbreaker.")
+
+    else:
+        print("No additional weather precautions are needed.")
+
+
+    # Step 6: End the program
+
+    print("\nThank you for using My Weather Dresser!")
